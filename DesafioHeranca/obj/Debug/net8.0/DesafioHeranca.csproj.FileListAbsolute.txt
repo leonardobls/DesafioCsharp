@@ -1,0 +1,15 @@
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.GeneratedMSBuildEditorConfig.editorconfig
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.AssemblyInfoInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.AssemblyInfo.cs
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.csproj.CoreCompileInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.sourcelink.json
+c:\code\Algoritmos-Leonardo\DesafioHeranca\bin\Debug\net8.0\DesafioHeranca.exe
+c:\code\Algoritmos-Leonardo\DesafioHeranca\bin\Debug\net8.0\DesafioHeranca.deps.json
+c:\code\Algoritmos-Leonardo\DesafioHeranca\bin\Debug\net8.0\DesafioHeranca.runtimeconfig.json
+c:\code\Algoritmos-Leonardo\DesafioHeranca\bin\Debug\net8.0\DesafioHeranca.dll
+c:\code\Algoritmos-Leonardo\DesafioHeranca\bin\Debug\net8.0\DesafioHeranca.pdb
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.dll
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\refint\DesafioHeranca.dll
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.pdb
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\DesafioHeranca.genruntimeconfig.cache
+c:\code\Algoritmos-Leonardo\DesafioHeranca\obj\Debug\net8.0\ref\DesafioHeranca.dll
