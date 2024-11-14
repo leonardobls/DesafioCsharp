@@ -1,0 +1,15 @@
+C:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.AssemblyInfoInputs.cache
+C:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.AssemblyInfo.cs
+C:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.csproj.CoreCompileInputs.cache
+C:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.sourcelink.json
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\bin\Debug\net8.0\DesafioEncapsulamento.exe
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\bin\Debug\net8.0\DesafioEncapsulamento.deps.json
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\bin\Debug\net8.0\DesafioEncapsulamento.runtimeconfig.json
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\bin\Debug\net8.0\DesafioEncapsulamento.dll
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\bin\Debug\net8.0\DesafioEncapsulamento.pdb
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.dll
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\refint\DesafioEncapsulamento.dll
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.pdb
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\DesafioEncapsulamento.genruntimeconfig.cache
+c:\code\Algoritmos-Leonardo\DesafioEncapsulamento\obj\Debug\net8.0\ref\DesafioEncapsulamento.dll
