@@ -1,0 +1,15 @@
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\bin\Debug\net8.0\DesafioConstrutor.exe
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\bin\Debug\net8.0\DesafioConstrutor.deps.json
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\bin\Debug\net8.0\DesafioConstrutor.runtimeconfig.json
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\bin\Debug\net8.0\DesafioConstrutor.dll
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\bin\Debug\net8.0\DesafioConstrutor.pdb
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.GeneratedMSBuildEditorConfig.editorconfig
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.AssemblyInfoInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.AssemblyInfo.cs
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.csproj.CoreCompileInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.sourcelink.json
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.dll
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\refint\DesafioConstrutor.dll
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.pdb
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\DesafioConstrutor.genruntimeconfig.cache
+c:\code\Algoritmos-Leonardo\DesafioConstrutor\obj\Debug\net8.0\ref\DesafioConstrutor.dll
