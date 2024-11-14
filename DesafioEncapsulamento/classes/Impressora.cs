@@ -86,6 +86,7 @@ namespace Classes
 
         private void ImpressaoUnica(bool colorido, string impressao)
         {
+            Console.WriteLine($"Tinta preta: {NivelTintaPreta} | Tinta Colorida {NivelTintaColorida} | Folhas: {NumeroPaginas}");
             Console.WriteLine("Começando a impressão de uma folha!");
             Console.WriteLine("Aguarde...");
             if (NumeroPaginas > 0 && (colorido ? (NivelTintaColorida > 0) : NivelTintaPreta > 0))
@@ -122,6 +123,21 @@ namespace Classes
             {
                 Console.WriteLine("Verifique os níveis do cartucho ou se há folhas disponíveis!\n");
             }
+        }
+
+        public void RecarregarFolhas()
+        {
+            NumeroPaginas += 20;
+        }
+
+        public void RecarregarCartuchoPreto()
+        {
+            NivelTintaPreta = 100;
+        }
+
+        public void RecarregarCartuchoColorido()
+        {
+            NivelTintaColorida = 100;
         }
     }
 }

@@ -42,7 +42,7 @@ public class Program
                         break;
 
                     case 3:
-                        // impressora.ImprimirFolhas();
+                        impressora.RecarregarFolhas();
                         break;
                     case 4:
                         // impressora.ImprimirFolhas();
