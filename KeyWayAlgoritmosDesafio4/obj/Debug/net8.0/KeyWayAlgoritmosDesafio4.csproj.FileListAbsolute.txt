@@ -1,0 +1,15 @@
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\bin\Debug\net8.0\KeyWayAlgoritmosDesafio4.exe
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\bin\Debug\net8.0\KeyWayAlgoritmosDesafio4.deps.json
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\bin\Debug\net8.0\KeyWayAlgoritmosDesafio4.runtimeconfig.json
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\bin\Debug\net8.0\KeyWayAlgoritmosDesafio4.dll
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\bin\Debug\net8.0\KeyWayAlgoritmosDesafio4.pdb
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.GeneratedMSBuildEditorConfig.editorconfig
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.AssemblyInfoInputs.cache
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.AssemblyInfo.cs
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.csproj.CoreCompileInputs.cache
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.sourcelink.json
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.dll
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\refint\KeyWayAlgoritmosDesafio4.dll
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.pdb
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\KeyWayAlgoritmosDesafio4.genruntimeconfig.cache
+c:\code\Algoritmos-Leonardo\KeyWayAlgoritmosDesafio4\obj\Debug\net8.0\ref\KeyWayAlgoritmosDesafio4.dll
