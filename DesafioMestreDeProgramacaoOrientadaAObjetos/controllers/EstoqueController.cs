@@ -42,7 +42,7 @@ class EstoqueController
                 }
                 else
                 {
-                    ingredienteSelecionado = opcoes[number].Nome;
+                    ingredienteSelecionado = opcoes[number - 1].Nome;
                     break;
                 }
             }

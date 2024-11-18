@@ -10,6 +10,7 @@ namespace Dtos
             BatataFrita = 1;
             Refrigerante = 1;
             PaoAdicional = true;
+            ValorBase = 25;
         }
     }
 }

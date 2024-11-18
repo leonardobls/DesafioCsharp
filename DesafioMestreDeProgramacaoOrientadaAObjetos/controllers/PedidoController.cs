@@ -40,11 +40,11 @@ class PedidoController
                         break;
 
                     case 2:
-                        // CancelarPedido();
+                        CancelarPedido();
                         break;
 
                     case 3:
-                        // ListarPedidosEmAndamento();
+                        ListarPedidosEmAndamento();
                         break;
 
                     case 4:
@@ -90,22 +90,21 @@ class PedidoController
                         string tipoDeHamburguer = EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "";
                         Hamburguer hamburguer = new Hamburguer(tipoDePao, tipoDeHamburguer);
                         AdicionarAdicional(hamburguer);
+                        decimal valor = hamburguer.CalculaValorTotal();
                         GlobalData.globalPedidos.Add(hamburguer);
+                        Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {valor.ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
                         Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
                         Thread.Sleep(3000);
                         break;
 
                     case 2:
-                        // CancelarPedido();
+                        //TODO: Implementar a criação de pedido para Vegetariano.
                         break;
 
                     case 3:
-                        // ListarPedidosEmAndamento();
+                        //TODO: Implementar a criação de pedido para Deluxe.
                         break;
 
-                    case 4:
-                        // ListarPedidosProntos();
-                        break;
                 }
             }
         }
@@ -119,6 +118,8 @@ class PedidoController
 
         attributes.Remove(attributes.Where((a) => a.Name == "Pao").First());
         attributes.Remove(attributes.Where((a) => a.Name == "Carne").First());
+        attributes.Remove(attributes.Where((a) => a.Name == "ValorBase").First());
+        attributes.Remove(attributes.Where((a) => a.Name == "NumeroPedido").First());
 
         while (loop)
         {
@@ -170,7 +171,7 @@ class PedidoController
 
                     if (int.TryParse(adicional, out int adicionalNumero))
                     {
-                        int valorAtual = (int)(selectedProperty.GetValue(hamburguer) ?? 0);
+                        int.TryParse(selectedProperty.GetValue(hamburguer).ToString(), out int valorAtual);
                         selectedProperty.SetValue(hamburguer, valorAtual + adicionalNumero);
                     }
                 }
@@ -180,5 +181,51 @@ class PedidoController
                 }
             }
         }
+    }
+
+    public static void CancelarPedido()
+    {
+        int i = 1;
+
+        Console.WriteLine("|###############################################################|");
+        Console.WriteLine("|                            ADICIONAL                          |");
+        Console.WriteLine("|                                                               |");
+        Console.WriteLine("|  * Escolha uma das opções abaixo:                             |");
+        Console.WriteLine("|                                                               |");
+
+        foreach (var pedido in GlobalData.globalPedidos)
+        {
+            Console.WriteLine($"|      [{i}] Pedido #{pedido.NumeroPedido.PadRight(33)}");
+            i++;
+        }
+
+        Console.WriteLine("|                                                               |");
+        Console.WriteLine("|      [0] - Voltar                                             |");
+        Console.WriteLine("|      [1000] - Avançar                                         |");
+        Console.WriteLine("|###############################################################|\n\n");
+
+        string input = Console.ReadLine() ?? "";
+        if (int.TryParse(input, out int number))
+        {
+            GlobalData.globalPedidos.Remove(GlobalData.globalPedidos[number]);
+            Console.WriteLine("\tPedido removido com sucesso!\n");
+        }
+        else
+        {
+            Console.WriteLine("Valor inserido não é um número!\n");
+        }
+
+        Thread.Sleep(3000);
+    }
+
+
+    public static void ListarPedidosEmAndamento()
+    {
+        foreach (Hamburguer hamburguer in GlobalData.globalPedidos)
+        {
+            Console.WriteLine($"\tPedido #{hamburguer.NumeroPedido}");
+        }
+        Console.WriteLine("\n");
+        Thread.Sleep(3000);
     }
 }
