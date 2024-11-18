@@ -86,23 +86,29 @@ class PedidoController
                         break;
 
                     case 1:
-                        string tipoDePao = EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "";
-                        string tipoDeHamburguer = EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "";
-                        Hamburguer hamburguer = new Hamburguer(tipoDePao, tipoDeHamburguer);
-                        AdicionarAdicional(hamburguer);
-                        decimal valor = hamburguer.CalculaValorTotal();
-                        GlobalData.globalPedidos.Add(hamburguer);
-                        Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {valor.ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
+                        Hamburguer hamburguerBase = new Hamburguer(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "");
+                        AdicionarAdicional(hamburguerBase);
+                        GlobalData.globalPedidos.Add(hamburguerBase);
+                        Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerBase.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
                         Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
                         Thread.Sleep(3000);
                         break;
 
                     case 2:
-                        //TODO: Implementar a criação de pedido para Vegetariano.
+                        Hamburguer hamburguerVegetariano = new HamburguerVegetariano(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", GlobalData.globalIngredientes.Where((i) => i.Slug == "bife-de-soja").First().Nome);
+                        AdicionarAdicional(hamburguerVegetariano);
+                        GlobalData.globalPedidos.Add(hamburguerVegetariano);
+                        Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerVegetariano.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
+                        Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
+                        Thread.Sleep(3000);
                         break;
 
                     case 3:
-                        //TODO: Implementar a criação de pedido para Deluxe.
+                        Hamburguer hamburguerDeluxe = new Hamburguer(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "");
+                        GlobalData.globalPedidos.Add(hamburguerDeluxe);
+                        Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerDeluxe.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
+                        Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
+                        Thread.Sleep(3000);
                         break;
 
                 }

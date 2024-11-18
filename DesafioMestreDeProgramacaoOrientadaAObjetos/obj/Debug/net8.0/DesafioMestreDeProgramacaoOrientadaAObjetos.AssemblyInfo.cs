@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesafioMestreDeProgramacaoOrientadaAObjetos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42fe9a5b759a8e3e1df2a8de07ce392f0589357d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26cafc6a1cb09af8b27334129d45fbe222fb3558")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesafioMestreDeProgramacaoOrientadaAObjetos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesafioMestreDeProgramacaoOrientadaAObjetos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
