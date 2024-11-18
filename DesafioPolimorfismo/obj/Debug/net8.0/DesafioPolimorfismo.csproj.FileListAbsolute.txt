@@ -1,0 +1,15 @@
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\bin\Debug\net8.0\DesafioPolimorfismo.exe
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\bin\Debug\net8.0\DesafioPolimorfismo.deps.json
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\bin\Debug\net8.0\DesafioPolimorfismo.runtimeconfig.json
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\bin\Debug\net8.0\DesafioPolimorfismo.dll
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\bin\Debug\net8.0\DesafioPolimorfismo.pdb
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.GeneratedMSBuildEditorConfig.editorconfig
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.AssemblyInfoInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.AssemblyInfo.cs
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.csproj.CoreCompileInputs.cache
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.sourcelink.json
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.dll
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\refint\DesafioPolimorfismo.dll
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.pdb
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\DesafioPolimorfismo.genruntimeconfig.cache
+c:\code\Algoritmos-Leonardo\DesafioPolimorfismo\obj\Debug\net8.0\ref\DesafioPolimorfismo.dll
