@@ -98,7 +98,7 @@ namespace Classes
 
                 for (int i = 0; i < TempoDeImpressao; i++)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(Duplex ? 500 : 1000);
 
                     if (i == 0)
                     {
@@ -133,11 +133,13 @@ namespace Classes
         public void RecarregarCartuchoPreto()
         {
             NivelTintaPreta = 100;
+            Console.WriteLine("Cartucho preto recarregado!");
         }
 
         public void RecarregarCartuchoColorido()
         {
             NivelTintaColorida = 100;
+            Console.WriteLine("Cartucho colorido recarregado!");
         }
     }
 }

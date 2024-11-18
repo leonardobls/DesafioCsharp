@@ -7,7 +7,7 @@ public class Program
 
         bool loop = true;
 
-        Impressora impressora = new Impressora(20, 20, false, 20);
+        Impressora impressora = new Impressora(20, 20, true, 20);
 
         while (loop)
         {
@@ -16,8 +16,9 @@ public class Program
             Console.WriteLine("\t [1] - Imprimir folha");
             Console.WriteLine("\t [2] - Imprimir conjunto de folhas [10 folhas por vez]");
             Console.WriteLine("\t [3] - Recarregar folha");
-            Console.WriteLine("\t [4] - Trocar cartucho");
-            Console.WriteLine("\t [5] - Ver níveis dos cartuchos\n");
+            Console.WriteLine("\t [4] - Trocar cartucho preto");
+            Console.WriteLine("\t [5] - Trocar cartucho colorido");
+            Console.WriteLine("\t [6] - Ver níveis dos cartuchos\n");
             Console.WriteLine("\t [0] - Sair");
 
             string input = Console.ReadLine();
@@ -45,9 +46,12 @@ public class Program
                         impressora.RecarregarFolhas();
                         break;
                     case 4:
-                        // impressora.ImprimirFolhas();
+                        impressora.RecarregarCartuchoPreto();
                         break;
                     case 5:
+                        impressora.RecarregarCartuchoColorido();
+                        break;
+                    case 6:
                         impressora.ExibeNiveisDeTinta();
                         break;
 
