@@ -7,7 +7,7 @@ public class Ingrediente
 
     public required string TipoDeMedida { get; set; }
 
-    public required string QuantidadeNoEstoque { get; set; }
+    public required decimal QuantidadeNoEstoque { get; set; }
 
     public required string Slug { get; set; }
 

@@ -8,6 +8,7 @@ namespace Dtos
             BatataFrita = 1;
             Refrigerante = 1;
             ValorBase = 30;
+            Categoria = "deluxe";
         }
     }
 }

@@ -4,13 +4,71 @@ class EstoqueController
 {
     public static void TelaControleEstoque()
     {
-        Console.WriteLine("Tela de controle de estoque...\n");
+        bool loop = true;
+
+        while (loop)
+        {
+            Console.WriteLine("|###############################################################|");
+            Console.WriteLine("|                     LISTA DE INGREDIENTES                     |");
+            Console.WriteLine("|                                                               |");
+
+            // Cabeçalho das colunas
+            Console.WriteLine("| Nome                  | Tipo de Medida      | Quantidade      |");
+            Console.WriteLine("|-----------------------|---------------------|-----------------|");
+
+            // Exibe os ingredientes
+            foreach (var ingrediente in GlobalData.globalIngredientes)
+            {
+                string nome = ingrediente.Nome.PadRight(21);
+                string tipoDeMedida = ingrediente.TipoDeMedida.PadRight(19);
+                string quantidade = ingrediente.QuantidadeNoEstoque.ToString().PadRight(15);
+
+                Console.WriteLine($"| {nome} | {tipoDeMedida} | {quantidade} |");
+            }
+
+            Console.WriteLine("|                                                               |");
+            Console.WriteLine("|      [0] - Voltar ao menu                                     |");
+            Console.WriteLine("|###############################################################|\n\n");
+
+            string input = Console.ReadLine() ?? "";
+
+            if (int.TryParse(input, out int option))
+            {
+                switch (option)
+                {
+                    case 0:
+                        loop = false;
+                        break;
+                }
+            }
+        }
     }
 
-    public static string SolicitaOpcaoIngrediente(string categoria, List<Ingrediente> ingredientes)
+
+    public static string SolicitaOpcaoIngrediente(string hamburguerCategoria, string categoria, List<Ingrediente> ingredientes)
     {
 
         List<Ingrediente> opcoes = ingredientes.Where((i) => i.Categoria == categoria).ToList();
+
+        if (categoria == "pao" && hamburguerCategoria != "vegetariano")
+        {
+            Ingrediente? ingrediente = opcoes.Where((i) => i.Slug == "pao-centeio").FirstOrDefault();
+
+            if (ingrediente != null)
+            {
+                opcoes.Remove(ingrediente);
+            }
+        }
+
+        if (categoria == "carne" && hamburguerCategoria != "vegetariano")
+        {
+            Ingrediente? ingrediente = opcoes.Where((i) => i.Slug == "bife-de-soja").FirstOrDefault();
+
+            if (ingrediente != null)
+            {
+                opcoes.Remove(ingrediente);
+            }
+        }
 
         Console.WriteLine("|###############################################################|");
         Console.WriteLine("|                     LISTA DE INGREDIENTES                     |");
@@ -40,10 +98,14 @@ class EstoqueController
                     loop = false;
                     break;
                 }
-                else
+                else if (number > 0 && number <= opcoes.Count)
                 {
                     ingredienteSelecionado = opcoes[number - 1].Nome;
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("Opção Inválida!\n");
                 }
             }
             else

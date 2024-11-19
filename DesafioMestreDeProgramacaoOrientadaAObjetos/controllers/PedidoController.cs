@@ -19,7 +19,6 @@ class PedidoController
             Console.WriteLine("|      [1] - Novo pedido                                        |");
             Console.WriteLine("|      [2] - Cancelar pedido                                    |");
             Console.WriteLine("|      [3] - Pedidos em andamento                               |");
-            Console.WriteLine("|      [4] - Pedidos prontos                                    |");
             Console.WriteLine("|                                                               |");
             Console.WriteLine("|      [0] - Voltar ao menu                                     |");
             Console.WriteLine("|###############################################################|\n\n");
@@ -46,10 +45,6 @@ class PedidoController
                     case 3:
                         ListarPedidosEmAndamento();
                         break;
-
-                    case 4:
-                        // ListarPedidosProntos();
-                        break;
                 }
             }
         }
@@ -75,6 +70,7 @@ class PedidoController
             Console.WriteLine("|###############################################################|\n\n");
 
             string input = Console.ReadLine() ?? "";
+            string pao = "", carne = "";
 
             if (int.TryParse(input, out int option))
             {
@@ -86,29 +82,68 @@ class PedidoController
                         break;
 
                     case 1:
-                        Hamburguer hamburguerBase = new Hamburguer(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "");
-                        AdicionarAdicional(hamburguerBase);
+                        pao = EstoqueController.SolicitaOpcaoIngrediente("base", "pao", GlobalData.globalIngredientes) ?? "";
+
+                        if (pao == "")
+                            break;
+
+                        carne = EstoqueController.SolicitaOpcaoIngrediente("base", "carne", GlobalData.globalIngredientes) ?? "";
+
+                        if (carne == "")
+                            break;
+
+                        Hamburguer hamburguerBase = new Hamburguer(pao, carne);
+                        if (AdicionarAdicional(hamburguerBase) == 0)
+                        {
+                            break;
+                        }
                         GlobalData.globalPedidos.Add(hamburguerBase);
                         Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerBase.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
                         Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
                         Thread.Sleep(3000);
+
                         break;
 
                     case 2:
-                        Hamburguer hamburguerVegetariano = new HamburguerVegetariano(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", GlobalData.globalIngredientes.Where((i) => i.Slug == "bife-de-soja").First().Nome);
-                        AdicionarAdicional(hamburguerVegetariano);
+                        pao = EstoqueController.SolicitaOpcaoIngrediente("vegetariano", "pao", GlobalData.globalIngredientes) ?? "";
+
+                        if (pao == "")
+                            break;
+
+                        carne = GlobalData.globalIngredientes.Where((i) => i.Slug == "bife-de-soja").First().Nome;
+
+                        if (carne == "")
+                            break;
+
+                        Hamburguer hamburguerVegetariano = new HamburguerVegetariano(pao, carne);
+                        if (AdicionarAdicional(hamburguerVegetariano) == 0)
+                        {
+                            break;
+                        }
                         GlobalData.globalPedidos.Add(hamburguerVegetariano);
                         Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerVegetariano.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
                         Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
                         Thread.Sleep(3000);
+
                         break;
 
                     case 3:
-                        Hamburguer hamburguerDeluxe = new Hamburguer(EstoqueController.SolicitaOpcaoIngrediente("pao", GlobalData.globalIngredientes) ?? "", EstoqueController.SolicitaOpcaoIngrediente("carne", GlobalData.globalIngredientes) ?? "");
+                        pao = EstoqueController.SolicitaOpcaoIngrediente("deluxe", "pao", GlobalData.globalIngredientes) ?? "";
+
+                        if (pao == "")
+                            break;
+
+                        carne = EstoqueController.SolicitaOpcaoIngrediente("deluxe", "carne", GlobalData.globalIngredientes) ?? "";
+
+                        if (carne == "")
+                            break;
+
+                        Hamburguer hamburguerDeluxe = new Hamburguer(pao, carne);
                         GlobalData.globalPedidos.Add(hamburguerDeluxe);
                         Console.WriteLine($"\tVALOR FINAL DO PEDIDO: {hamburguerDeluxe.CalculaValorTotal().ToString("C2", new System.Globalization.CultureInfo("pt-BR"))}\n");
                         Console.WriteLine("\tPedido solicitado com sucesso!\n\tPassando para estágio de preparação... Por favor, aguarde!\n");
                         Thread.Sleep(3000);
+
                         break;
 
                 }
@@ -116,9 +151,10 @@ class PedidoController
         }
     }
 
-    public static void AdicionarAdicional(Hamburguer hamburguer)
+    public static int AdicionarAdicional(Hamburguer hamburguer)
     {
         bool loop = true;
+        int k = 0;
 
         List<PropertyInfo> attributes = typeof(Hamburguer).GetProperties().ToList();
 
@@ -126,8 +162,9 @@ class PedidoController
         attributes.Remove(attributes.Where((a) => a.Name == "Carne").First());
         attributes.Remove(attributes.Where((a) => a.Name == "ValorBase").First());
         attributes.Remove(attributes.Where((a) => a.Name == "NumeroPedido").First());
+        attributes.Remove(attributes.Where((a) => a.Name == "Categoria").First());
 
-        while (loop)
+        while (loop && k < 4)
         {
 
             int i = 1;
@@ -161,11 +198,11 @@ class PedidoController
                 if (option == 0)
                 {
                     loop = false;
-                    break;
+                    return 0;
                 }
                 else if (option == 1000)
                 {
-                    break;
+                    return 1;
                 }
                 else if (option > 0 && option <= attributes.Count)
                 {
@@ -177,8 +214,23 @@ class PedidoController
 
                     if (int.TryParse(adicional, out int adicionalNumero))
                     {
-                        int.TryParse(selectedProperty.GetValue(hamburguer).ToString(), out int valorAtual);
-                        selectedProperty.SetValue(hamburguer, valorAtual + adicionalNumero);
+                        if (adicionalNumero <= 4)
+                        {
+                            int.TryParse(selectedProperty.GetValue(hamburguer).ToString(), out int valorAtual);
+                            selectedProperty.SetValue(hamburguer, valorAtual + adicionalNumero);
+                            k++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Valor excedente!\n");
+                            Thread.Sleep(3000);
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("O valor deve ser um número de 1 a 4!\n");
+                        Thread.Sleep(3000);
                     }
                 }
                 else
@@ -187,6 +239,8 @@ class PedidoController
                 }
             }
         }
+
+        return 0;
     }
 
     public static void CancelarPedido()
@@ -194,27 +248,48 @@ class PedidoController
         int i = 1;
 
         Console.WriteLine("|###############################################################|");
-        Console.WriteLine("|                            ADICIONAL                          |");
+        Console.WriteLine("|                     CANCELAMENTO DE PEDIDOS                   |");
         Console.WriteLine("|                                                               |");
         Console.WriteLine("|  * Escolha uma das opções abaixo:                             |");
         Console.WriteLine("|                                                               |");
 
-        foreach (var pedido in GlobalData.globalPedidos)
+        if (GlobalData.globalPedidos.Count > 0)
         {
-            Console.WriteLine($"|      [{i}] Pedido #{pedido.NumeroPedido.PadRight(33)}");
-            i++;
+            foreach (var pedido in GlobalData.globalPedidos)
+            {
+                Console.WriteLine($"|      [{i}] Pedido #{pedido.NumeroPedido.PadRight(33)}|");
+                i++;
+            }
+        }
+        else
+        {
+            Console.WriteLine($"|      NENHUM PEDIDO REGISTRADO :( {("").PadRight(29)}|");
         }
 
         Console.WriteLine("|                                                               |");
         Console.WriteLine("|      [0] - Voltar                                             |");
-        Console.WriteLine("|      [1000] - Avançar                                         |");
+        if (GlobalData.globalPedidos.Count > 0)
+        {
+            Console.WriteLine("|      [1000] - Avançar                                         |");
+        }
         Console.WriteLine("|###############################################################|\n\n");
 
         string input = Console.ReadLine() ?? "";
         if (int.TryParse(input, out int number))
         {
-            GlobalData.globalPedidos.Remove(GlobalData.globalPedidos[number]);
-            Console.WriteLine("\tPedido removido com sucesso!\n");
+            if (number == 0)
+            {
+                return;
+            }
+            else if (number > 0 && number <= GlobalData.globalPedidos.Count)
+            {
+                GlobalData.globalPedidos.Remove(GlobalData.globalPedidos[number - 1]);
+                Console.WriteLine("\tPedido removido com sucesso!\n");
+            }
+            else
+            {
+                Console.WriteLine("O número inserido não é válido!\n");
+            }
         }
         else
         {

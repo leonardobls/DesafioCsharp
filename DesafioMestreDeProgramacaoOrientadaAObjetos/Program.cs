@@ -22,7 +22,7 @@
             Console.WriteLine("|                                                               |");
             Console.WriteLine("|      [1] - Pedidos                                            |");
             Console.WriteLine("|      [2] - Tela de controle de estoque                        |");
-            Console.WriteLine("|      [3] - Fluxo do caixa                                     |");
+            // Console.WriteLine("|      [3] - Fluxo do caixa                                     |");
             Console.WriteLine("|                                                               |");
             Console.WriteLine("|      [0] - Sair                                               |");
             Console.WriteLine("|###############################################################|\n\n");
@@ -44,10 +44,6 @@
 
                     case 2:
                         EstoqueController.TelaControleEstoque();
-                        break;
-
-                    case 3:
-                        CaixaController.TelaFluxoCaixa();
                         break;
                 }
             }

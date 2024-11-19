@@ -11,6 +11,7 @@ namespace Dtos
             Refrigerante = 1;
             PaoAdicional = true;
             ValorBase = 25;
+            Categoria = "vegetariano";
         }
     }
 }
