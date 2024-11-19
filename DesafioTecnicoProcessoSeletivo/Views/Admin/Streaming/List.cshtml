@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Listagem de Streamings";
+    Layout = "_AdminLayout";
+}
+
+<section class="streaming-list-page">
+    <div class="header-bar">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="/admin">Home</a> &gt;
+            <a href="/admin/streamings">Streamings</a>
+        </nav>
+
+        <div class="right-wrapper">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="button" href="/gerenciador/streaming/create">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path
+                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button class="create-button">
+                Create
+            </button>
+        </div>
+    </div>
+
+    <div class="list">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Item 1</td>
+                    <td>Active</td>
+                    <td class="actions">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Item 2</td>
+                    <td>Inactive</td>
+                    <td class="actions">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+    </div>
+</section>
