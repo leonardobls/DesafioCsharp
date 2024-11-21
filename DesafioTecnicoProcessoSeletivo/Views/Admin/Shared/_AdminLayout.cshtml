@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DesafioTecnicoProcessoSeletivo</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/admin/css/main.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DesafioTecnicoProcessoSeletivo.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,21 +15,12 @@
 </head>
 
 <body>
-    <div class="admin">
-        <div>
+    <partial name="/Views/Admin/Components/Header.cshtml" />
 
-        </div>
-        <div>
-            <partial name="/Views/Admin/Components/Header.cshtml" />
-            <div class="container">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </div>
-        </div>
-    </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
     <script src="~/admin/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

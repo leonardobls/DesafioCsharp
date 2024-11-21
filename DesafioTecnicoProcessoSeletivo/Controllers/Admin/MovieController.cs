@@ -48,17 +48,17 @@ namespace DesafioTecnicoProcessoSeletivo.Admin.Controllers
             return View();
         }
 
-        // [Route("/gerenciador/streaming/edit/{Id?}")]
-        // public async Task<IActionResult> Edit(int? Id)
-        // {
+        [Route("/gerenciador/movie/edit/{Id?}")]
+        public async Task<IActionResult> Edit(int? Id)
+        {
 
-        //     if (Id != null)
-        //         ViewBag.Streaming = _context.Streaming.First((s) => s.Id == Id);
-        //     else
-        //         ViewBag.Streaming = null;
+            if (Id != null)
+                ViewBag.Movie = _context.Movie.First((s) => s.Id == Id);
+            else
+                ViewBag.Movie = null;
 
-        //     return View("/Views/Admin/Streaming/Edit.cshtml");
-        // }
+            return View("/Views/Admin/Movie/Edit.cshtml");
+        }
 
         // [Route("/gerenciador/streaming/save/{Id?}")]
         // public async Task<IActionResult> Save([FromForm] StreamingDTO streamingForm, int? Id)

@@ -1,119 +1,107 @@
-.header-bar {
+.list-page {
+    margin: 3rem 5rem;
+}
+
+.list-page h1 {
+    padding: 0 3rem;
+}
+
+.list-page .header-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px 0;
+    padding: 20px 3rem;
 }
 
-.header-bar .right-wrapper {
+.list-page .header-bar .right-wrapper {
     display: flex;
     gap: 20px;
 }
 
-.breadcrumb {
-    font-size: 14px;
-}
-
-.breadcrumb a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.search-bar {
+.list-page .header-bar .right-wrapper .search-bar {
     display: flex;
     align-items: center;
 }
 
-.search-bar input {
+.list-page .header-bar .right-wrapper .search-bar input {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 5px;
 }
 
-.search-bar button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.search-bar button svg {
-    width: 20px;
-    height: 20px;
-    fill: #555;
-}
-
-.search-bar button:hover svg {
-    fill: #000;
-}
-
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.input-wrapper .clear-filter-button {
+.list-page .header-bar .right-wrapper .search-bar .input-wrapper .clear-filter-button {
     position: absolute;
     right: 30px;
     cursor: pointer;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+.list-page .header-bar .right-wrapper .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.list-page {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.list-page .header-bar .right-wrapper .search-bar button svg {
+    width: 20px;
+    height: 20px;
+    fill: #555;
 }
 
-.list table {
+.list-page .header-bar .right-wrapper .search-bar button:hover svg {
+    fill: #000;
+}
+
+.list-page .header-bar .right-wrapper .search-bar .input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.list-page .list {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.list-page .list table {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
 }
 
-.list th,
-.list td {
+.list-page .list th,
+.list-page .list td {
     text-align: left;
     padding: 12px 16px;
-    border-bottom: 1px solid #dee2e6;
 }
 
-.list th {
+.list-page .list th {
     background-color: #f1f1f1;
     font-weight: bold;
 }
 
-.list td {
-    background-color: #fff;
+.list-page .list tr {
+    border-bottom: 1px solid #dee2e6;
 }
 
-.list tr:nth-child(even) td {
+.list-page .list tr:nth-child(even) td {
     background-color: #f9f9f9;
 }
 
-.list .actions {
+.list-page .list td {
+    background-color: #fff;
+}
+
+
+
+.list-page .list .actions {
     display: flex;
     gap: 10px;
     text-align: right;
     white-space: nowrap;
 }
 
-.list .actions button {
+.list-page .list .actions button {
     padding: 6px 12px;
     background: var(--primary-color);
     color: #fff;
@@ -122,18 +110,18 @@ body {
     cursor: pointer;
 }
 
-.list .actions button:hover {
+.list-page .list .actions button:hover {
     background: var(--primary-color);
 }
 
-.pagination {
+.list-page .pagination {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.pagination a {
+.list-page .pagination a {
     text-decoration: none;
     padding: 8px 16px;
     color: var(--primary-color);
@@ -141,11 +129,11 @@ body {
     border-radius: 4px;
 }
 
-.pagination a:hover {
+.list-page .pagination a:hover {
     background-color: #e9ecef;
 }
 
-.pagination .active {
+.list-page .pagination .active {
     background-color: var(--primary-color);
     color: white;
 }

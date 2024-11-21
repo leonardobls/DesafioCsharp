@@ -3,13 +3,14 @@
     Layout = "_AdminLayout";
 }
 
-<section class="streaming-list-page">
+<section class="list-page">
+    <h1 class="text text-20 text-dark text-fw700">Lista de Streamings</h1>
     <div class="header-bar">
         <!-- Breadcrumb -->
         <nav class="breadcrumb">
-            <a href="/admin" class="text">Home</a>
+            <a href="/gerenciador" class="text text-red text-fw700 text-13">Home</a>
             &nbsp<span class="text-red">|</span>&nbsp
-            <a href="/admin/streamings" class="text">Streamings</a>
+            <a href="/gerenciador/streaming" class="text text-red text-fw700 text-13">Streamings</a>
         </nav>
 
         <div class="right-wrapper">
@@ -58,15 +59,14 @@
                 {
                     <tr>
                         <td style="width: 10%;">1</td>
-                        <td style="width: 70%;">@streaming.Name</td>
-                        <td style="width: 20%;" class="actions">
+                        <td style="width: 80%;">@streaming.Name</td>
+                        <td class="actions">
                             <a class="button" href="/gerenciador/streaming/edit/@streaming.Id">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                                     fill="#FFFFFF">
                                     <path
                                         d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
                                 </svg>
-                                <span class="text text-13 text-fw900">EDITAR</span>
                             </a>
                             <a class="button" href="/gerenciador/streaming/delete/@streaming.Id">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -74,7 +74,6 @@
                                     <path
                                         d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                                 </svg>
-                                <span class="text text-13 text-fw900">DELETAR</span>
                             </a>
                         </td>
                     </tr>
