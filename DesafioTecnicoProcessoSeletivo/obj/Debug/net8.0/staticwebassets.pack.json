@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\admin\\css\\base\\variables.css"
     },
     {
+      "Id": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\components\\form.css",
+      "PackagePath": "staticwebassets\\admin\\css\\components\\form.css"
+    },
+    {
       "Id": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\components\\header.css",
       "PackagePath": "staticwebassets\\admin\\css\\components\\header.css"
     },

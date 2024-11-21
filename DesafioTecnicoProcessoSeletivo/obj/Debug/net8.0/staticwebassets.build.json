@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Eh7SzH3JMCW64yN/kIkiOywDiCa71Wc+XzmO8HmBAsM=",
+  "Hash": "1UvITwq8xw4dPHKNVpxMIRw9cMgsC+xSqYyn6qHc+gI=",
   "Source": "DesafioTecnicoProcessoSeletivo",
   "BasePath": "_content/DesafioTecnicoProcessoSeletivo",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\css\\base\\variables.css"
+    },
+    {
+      "Identity": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\components\\form.css",
+      "SourceId": "DesafioTecnicoProcessoSeletivo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\",
+      "BasePath": "_content/DesafioTecnicoProcessoSeletivo",
+      "RelativePath": "admin/css/components/form.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\css\\components\\form.css"
     },
     {
       "Identity": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\components\\header.css",

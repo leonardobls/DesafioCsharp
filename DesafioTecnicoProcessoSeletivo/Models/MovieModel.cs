@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DesafioTecnicoProcessoSeletivo.Models
 {
-    public class Movie
+    public class MovieModel
     {
         public int Id { get; set; }
 
@@ -26,6 +26,6 @@ namespace DesafioTecnicoProcessoSeletivo.Models
         [ForeignKey("CategoryId")]
         public int CategoryId { get; set; }
 
-        public virtual MoviesCategory? Category { get; set; }
+        public virtual MoviesCategoryModel? Category { get; set; }
     }
 }

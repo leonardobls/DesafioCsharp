@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/Streaming/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RyZWFtaW5nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/Streaming/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RyZWFtaW5nXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

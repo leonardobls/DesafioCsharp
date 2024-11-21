@@ -6,9 +6,9 @@ namespace DesafioTecnicoProcessoSeletivo.Data
     public class AppDbContext(IConfiguration configuration) : DbContext
     {
 
-        public required DbSet<Movie> Movie { get; set; }
-        public required DbSet<MoviesCategory> MoviesCategory { get; set; }
-        public required DbSet<Streaming> Streaming { get; set; }
+        public required DbSet<MovieModel> Movie { get; set; }
+        public required DbSet<MoviesCategoryModel> MoviesCategory { get; set; }
+        public required DbSet<StreamingModel> Streaming { get; set; }
         private readonly IConfiguration _configuration = configuration;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DesafioTecnicoProcessoSeletivo.Models
 {
-    public class Streaming
+    public class StreamingModel
     {
         public int Id { get; set; }
 

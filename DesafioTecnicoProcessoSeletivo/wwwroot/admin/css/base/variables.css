@@ -1,3 +1,45 @@
 :root {
     --primary-color: #d10404;
 }
+
+.button {
+    padding: 6px 12px;
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: .3s all ease;
+}
+
+.button:hover {
+    background-color: transparent;
+    transition: .3s all ease;
+    color: var(--primary-color);
+}
+
+.button:hover svg {
+    fill: var(--primary-color);
+}
+
+
+.text {
+    font-family: "Inter", sans-serif;
+}
+
+.text-red {
+    color: var(--primary-color);
+}
+
+.text-13 {
+    font-size: 13px;
+}
+
+.text-fw900 {
+    font-weight: 900;
+}
