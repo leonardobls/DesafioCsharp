@@ -30,6 +30,22 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tcG9uZW50c1xIZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/MoviesCategory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVzQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/MoviesCategory/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVzQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/Movie/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/Movie/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW92aWVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/Algoritmos-Leonardo/DesafioTecnicoProcessoSeletivo/Views/Admin/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

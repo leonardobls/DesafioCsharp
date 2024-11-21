@@ -21,8 +21,8 @@
       "PackagePath": "staticwebassets\\admin\\css\\main.css"
     },
     {
-      "Id": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\pages\\streaming-list.css",
-      "PackagePath": "staticwebassets\\admin\\css\\pages\\streaming-list.css"
+      "Id": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\pages\\list.css",
+      "PackagePath": "staticwebassets\\admin\\css\\pages\\list.css"
     },
     {
       "Id": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\js\\site.js",

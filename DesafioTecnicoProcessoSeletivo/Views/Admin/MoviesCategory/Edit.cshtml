@@ -1,0 +1,38 @@
+@{
+    Layout = "_AdminLayout";
+}
+
+<section class="list-page">
+    <div class="header-bar">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="/admin" class="text">Home</a>
+            &nbsp<span class="text-red">|</span>&nbsp
+            <a href="/gerenciador/movies-category" class="text">Lista de Gêneros</a>
+            &nbsp<span class="text-red">|</span>&nbsp
+            <a href="" class="text">Gênero</a>
+        </nav>
+    </div>
+
+    <div class="form-wrapper">
+        <form class="form" method="post"
+            action="@(ViewBag.MoviesCategory != null ? "/gerenciador/movies-category/save/"+ViewBag.MoviesCategory.Id : "/gerenciador/movies-category/save")">
+            <div class="input-wrapper">
+                <div class="form-group">
+                    <label for="title" class="label">Título</label>
+                    <input type="text" id="title" name="Name" class="input"
+                        value="@(ViewBag.MoviesCategory != null ? ViewBag.MoviesCategory.Name : "")"
+                        placeholder="Digite o título" required>
+                </div>
+            </div>
+            <button class="button" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path
+                        d="M840-680v480q0 33-23.5 56.5T760-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160Zm-80 34L646-760H200v560h560v-446ZM480-240q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM240-560h360v-160H240v160Zm-40-86v446-560 114Z" />
+                </svg>
+                <span class="text text-13 text-fw900">SALVAR</span>
+            </button>
+        </form>
+    </div>
+</section>

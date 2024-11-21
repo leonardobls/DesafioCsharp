@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1UvITwq8xw4dPHKNVpxMIRw9cMgsC+xSqYyn6qHc+gI=",
+  "Hash": "aRdBAwhTGD3extC0VIvKeO/JUArMESgDoh+U81RfOwo=",
   "Source": "DesafioTecnicoProcessoSeletivo",
   "BasePath": "_content/DesafioTecnicoProcessoSeletivo",
   "Mode": "Default",
@@ -131,12 +131,12 @@
       "OriginalItemSpec": "wwwroot\\admin\\css\\main.css"
     },
     {
-      "Identity": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\pages\\streaming-list.css",
+      "Identity": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\css\\pages\\list.css",
       "SourceId": "DesafioTecnicoProcessoSeletivo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\",
       "BasePath": "_content/DesafioTecnicoProcessoSeletivo",
-      "RelativePath": "admin/css/pages/streaming-list.css",
+      "RelativePath": "admin/css/pages/list.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,7 +147,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\css\\pages\\streaming-list.css"
+      "OriginalItemSpec": "wwwroot\\admin\\css\\pages\\list.css"
     },
     {
       "Identity": "C:\\code\\Algoritmos-Leonardo\\DesafioTecnicoProcessoSeletivo\\wwwroot\\admin\\js\\site.js",
